@@ -20,6 +20,10 @@ class RetirementCalculator
 
 end
 
+def is_number?(string)
+  true if Float(string) rescue false
+end
+
 def is_negative_number?(num)
   if num.to_i < 0 
     puts "You cannot enter negative value."
@@ -34,7 +38,7 @@ age = gets.chomp
 print "At what age would you like to retire? "
 retirement_age = gets.chomp
 
-if age.to_i.is_a?(Integer) || retirement_age.to_i.is_a?(Integer)
+if is_number?(age) || is_number?(retirement_age)
 
   person_1 = RetirementCalculator.new(age.to_i, retirement_age.to_i)
   person_1.calulate
@@ -43,3 +47,4 @@ if age.to_i.is_a?(Integer) || retirement_age.to_i.is_a?(Integer)
   print "It's #{person_1.current_year} so you can retire in #{person_1.retirement_year}."
 end
 
+# 'Droid Sans Mono', 'monospace', monospace

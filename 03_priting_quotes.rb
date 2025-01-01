@@ -31,7 +31,6 @@
 
 # end
 
-
 module MyModule
   RATE = 123
 
