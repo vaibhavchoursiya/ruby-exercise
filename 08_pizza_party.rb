@@ -10,12 +10,11 @@ class PizzyParty
   end
 
   def divide_pizza
-    @per_pieces = ((@num_of_pizza * @num_of_slices) / @num_of_people).round
+    @per_pieces = ((@num_of_pizza * @num_of_slices) / @num_of_people).floor
 
-    @left_over_piece = (@num_of_slices*@num_of_pizza -  @num_of_people*@per_pieces).to_i
+    @left_over_piece = (@num_of_slices*@num_of_pizza -  @num_of_people*@per_pieces).to_i 
+    0 if @left_over_piece < 0
   end
-
-
 end
 
 print "How many people? "
