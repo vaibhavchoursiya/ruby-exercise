@@ -17,8 +17,7 @@ def password_validator(password)
     else 
       return 1
     end
-
-
+    
   elsif password.match?(/\A[a-zA-Z0-9]+\z/) && password.length >= 8
     return 2
   elsif password.length > 8 && password.match?(/(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])/)
