@@ -20,6 +20,9 @@ class PasswordGenerator
 
   def random_char 
     rand = generate_num(@@char.size)
+    if "aioue".include? @@char[rand]
+      return random_number
+    end
     @@char[rand]
   end
 
