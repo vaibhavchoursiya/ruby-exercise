@@ -7,7 +7,7 @@ while true do
   if name == ""
     rand = Random.rand(name_array.size)
     puts "The winner is... #{name_array[rand]}"
-    break
+    name_array.delete_at(rand)
   else 
     name_array.push(name)
   end  
